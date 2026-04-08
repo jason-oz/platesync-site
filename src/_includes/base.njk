@@ -60,6 +60,14 @@
     }
     </script>
     {% block head %}{% endblock %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMSHM5NXH0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZMSHM5NXH0');
+    </script>
     <!-- Speculation Rules — prefetch/prerender for instant page transitions -->
     <script type="speculationrules">
     {
