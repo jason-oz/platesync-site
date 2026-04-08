@@ -29,8 +29,8 @@ Your data is stored on a self-hosted Supabase instance on a Hetzner VPS in Germa
 
 ## Data deletion
 
-You can delete your account and all associated data at any time by contacting us. Email jason@hcdigital.com.au.
+You can delete your account and all associated data at any time by contacting us. Email support@hcdigital.com.au.
 
 ## Contact
 
-For privacy questions, contact Jason Townsend at jason@hcdigital.com.au.
+For privacy questions, contact Jason Townsend at support@hcdigital.com.au.

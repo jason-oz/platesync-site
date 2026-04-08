@@ -37,4 +37,4 @@ We may update these terms from time to time. Continued use of the Service after 
 
 ## Contact
 
-For questions about these terms, contact Jason Townsend at jason@hcdigital.com.au.
+For questions about these terms, contact Jason Townsend at support@hcdigital.com.au.
