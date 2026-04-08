@@ -1,0 +1,59 @@
+# PlateSync — Full Documentation
+
+> The family meal planner that knows what everyone needs.
+
+PlateSync is a web application that builds weekly meal plans with per-person portions based on each family member's health profile. It calculates exactly how many servings of each recipe go on each plate, generates smart shopping lists, and provides a mobile-optimised cooking guide.
+
+## How It Works
+
+1. **Set up your family** — Add each family member with age, weight, height, sex, activity level, fitness goal, weekly training schedule, allergies, and food preferences.
+
+2. **Build your recipe collection** — Search the web for recipes using AI, or add your own. AI catalogues full ingredients, step-by-step instructions, and per-serving nutrition.
+
+3. **Plan your week** — Assign recipes to Mon–Sun breakfast/lunch/dinner slots. Recipes ranked by pantry coverage. Leftovers from previous cooks available as an option.
+
+4. **Shop smart** — Confirm the plan to generate a shopping list with full-batch ingredient amounts. Subtracts pantry stock. AI normalises to practical package sizes.
+
+5. **Cook with a guide** — Tap any meal on your phone for cooking mode: checkable ingredients, numbered steps, per-person portion breakdown.
+
+6. **Handle leftovers** — Mark as cooked, then choose: keep in fridge (4-day expiry), freeze, or discard. Leftovers can be assigned to future meals.
+
+## Nutrition Calculation
+
+- **BMR:** Mifflin-St Jeor equation (weight, height, age, sex)
+- **TDEE:** BMR × activity multiplier (1.2 sedentary → 1.9 extra active)
+- **Calorie target:** TDEE × goal adjustment (−20% lose weight → +25% sports performance)
+- **Protein target:** 0.9–2.2 g/kg body weight depending on age, activity, and goal
+- **Daily adjustments:** Training days get +15% calories / +10% protein. Rest days get −10% calories.
+- **Portion tendency:** Smaller (×0.85), Normal (×1.0), Larger (×1.15)
+- **Capping:** Total portions never exceed recipe servings. Scaled proportionally if over.
+
+## Supported Diets and Cuisines
+
+**Diets:** Balanced, High Protein, Mediterranean, Keto, Paleo, Whole30, Vegetarian, Vegan
+**Cuisines:** Mediterranean, Asian, Indian, Mexican, Japanese, Korean, Thai, Middle Eastern, American, African, Mixed
+
+## Allergy Detection
+
+Supports: Eggs, Dairy/Lactose, Gluten/Coeliac, Peanuts, Tree Nuts, Shellfish, Fish, Soy, Sesame, Wheat, Mustard, Sulphites, Lupin. Smart modifier detection (e.g., "dairy-free milk" not flagged as dairy).
+
+## Household Sharing
+
+Multiple users share one household. All recipes, pantry, meal plans, and family profiles are shared. Owner invites members by email.
+
+## Technology
+
+- Frontend: React + TypeScript + Vite + Tailwind CSS
+- Database: Self-hosted Supabase (Postgres) on Hetzner VPS
+- AI: Google Gemini 2.5 Flash via OpenRouter
+- Hosting: Vercel
+
+## Links
+
+- App: https://app.getplatesync.com
+- Website: https://getplatesync.com
+- Built by: High Country Digital (https://highcountry.digital)
+
+## Contact
+
+Jason Townsend — jason@hcdigital.com.au

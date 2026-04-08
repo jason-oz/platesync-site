@@ -1,0 +1,20 @@
+# PlateSync
+
+> The family meal planner that knows what everyone needs.
+
+PlateSync builds weekly meal plans with per-person portions based on each family member's health profile — age, weight, activity level, fitness goals, and dietary needs. It calculates exactly how many servings of each recipe go on each plate, generates a shopping list based on what you actually need to buy, and provides a mobile cooking guide with step-by-step instructions.
+
+## Key Features
+- Per-person portion calculation using Mifflin-St Jeor BMR + protein targets
+- Day-aware nutrition (training days get more, rest days less)
+- AI recipe discovery and cataloguing from the web
+- Cooking mode with checkable ingredients and portion guidance
+- Leftovers tracking (fridge, freeze, or use for another meal)
+- Smart shopping lists with full-batch amounts and pantry deduction
+- Allergy detection across family members
+- Household sharing (multiple users, shared data)
+
+## Links
+- App: https://app.getplatesync.com
+- Website: https://getplatesync.com
+- Built by: High Country Digital (https://highcountry.digital)

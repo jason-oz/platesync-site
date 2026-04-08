@@ -1,0 +1,134 @@
+---
+layout: base.njk
+title: ""
+description: "The family meal planner that knows what everyone needs. Per-person portions, smart shopping lists, and a mobile cooking guide — all powered by AI."
+---
+
+{# ──── Hero ──── #}
+<section class="relative overflow-hidden bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-24 sm:py-32 text-center">
+    <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-4">Meal planning for real families</p>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-neutral-900 leading-tight max-w-3xl mx-auto">
+      Everyone at the table gets exactly what they need
+    </h1>
+    <p class="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
+      PlateSync builds weekly meal plans with per-person portions based on each family member's health profile. Cook the full recipe, plate it right, and only buy what you need.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ site.appUrl }}" class="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-emerald-700 transition-colors">
+        Get Started Free
+      </a>
+      <a href="#how-it-works" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">
+        See how it works &darr;
+      </a>
+    </div>
+  </div>
+</section>
+
+{# ──── Problem ──── #}
+<section class="bg-neutral-50 border-y border-neutral-200">
+  <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-2xl font-bold text-neutral-900">The weekly scramble stops here</h2>
+    <p class="mt-4 text-base text-neutral-600 max-w-2xl mx-auto">
+      Dad needs 150g of protein. Mum's watching calories. The toddler eats half a serve of everything. The 6-year-old won't touch anything green. You're cooking one meal and somehow everyone needs a different plate.
+    </p>
+    <p class="mt-4 text-base text-neutral-600 max-w-2xl mx-auto">
+      Most meal planners treat your family as one person. PlateSync doesn't.
+    </p>
+  </div>
+</section>
+
+{# ──── How It Works ──── #}
+<section id="how-it-works" class="bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">How it works</p>
+      <h2 class="text-3xl font-bold text-neutral-900">From setup to shopping list in minutes</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {% set steps = [
+        { num: "01", title: "Set up your family", desc: "Add each family member with their age, weight, goals, activity level, allergies, and food preferences. PlateSync calculates personalised daily targets for everyone." },
+        { num: "02", title: "Build your recipe collection", desc: "Search the web for recipes using AI, or add your own. PlateSync catalogues each recipe with full ingredients, instructions, and per-serving nutrition." },
+        { num: "03", title: "Plan your week", desc: "Assign recipes to each day. The app ranks recipes by what you already have on hand and flags any allergy conflicts. Portions are calculated per person, capped to the recipe's actual serving count." },
+        { num: "04", title: "Shop smart", desc: "Confirm your plan and get a shopping list with full-batch ingredient amounts — what you actually buy and cook. It subtracts what's in your pantry so you only buy what you need." },
+        { num: "05", title: "Cook with a guide", desc: "Tap any meal on your phone to open cooking mode: checkable ingredients, step-by-step instructions, and a clear breakdown of how much to plate for each person." },
+        { num: "06", title: "Handle leftovers", desc: "After cooking, mark the meal as done. Surplus servings? Keep them in the fridge, freeze them, or discard. Leftovers show up as an option for future meals — no extra shopping." }
+      ] %}
+      {% for step in steps %}
+      <div class="flex gap-4">
+        <span class="font-mono text-sm font-bold text-emerald-600 shrink-0 mt-1">{{ step.num }}</span>
+        <div>
+          <h3 class="text-base font-bold text-neutral-900">{{ step.title }}</h3>
+          <p class="mt-1 text-sm text-neutral-600 leading-relaxed">{{ step.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ──── Features ──── #}
+<section id="features" class="bg-neutral-50 border-y border-neutral-200">
+  <div class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">Features</p>
+      <h2 class="text-3xl font-bold text-neutral-900">Built for families, not individuals</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% set features = [
+        { title: "Per-person portions", desc: "Science-backed targets using the Mifflin-St Jeor equation. Protein, calories, and portions personalised for every family member — from toddlers to adults." },
+        { title: "Day-aware nutrition", desc: "Targets adjust per day based on each person's weekly training schedule. More food on training days, less on rest days." },
+        { title: "Cooking mode", desc: "Full-screen mobile recipe view with checkable ingredients and step-by-step instructions. Designed for messy hands and arm's-length reading." },
+        { title: "Leftovers tracking", desc: "Cook the full recipe. Surplus servings are tracked and can be assigned to future meals, frozen, or discarded. Shopping lists skip leftover meals." },
+        { title: "Allergy detection", desc: "Recipes are scanned against family members' allergies automatically. Smart enough to know that 'dairy-free milk' isn't dairy." },
+        { title: "Smart shopping lists", desc: "Full-batch ingredient amounts, pantry deduction, and AI normalisation to practical package sizes. Buy what you need, not what a formula says." },
+        { title: "AI recipe import", desc: "Search the web for real recipes. AI catalogues every ingredient, every step, and the nutrition — no manual data entry." },
+        { title: "Household sharing", desc: "Invite your partner or housemates. Everyone shares recipes, pantry, and meal plans from their own account." },
+        { title: "Supply management", desc: "Track fridge, pantry, and freezer. Auto-deducted when you cook, auto-restocked when you shop, restored if you change your mind." }
+      ] %}
+      {% for feature in features %}
+      <div class="rounded-xl border border-neutral-200 bg-white p-5">
+        <h3 class="text-sm font-bold text-neutral-900">{{ feature.title }}</h3>
+        <p class="mt-2 text-sm text-neutral-600 leading-relaxed">{{ feature.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ──── FAQ ──── #}
+<section id="faq" class="bg-white">
+  <div class="max-w-3xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">FAQ</p>
+      <h2 class="text-3xl font-bold text-neutral-900">Common questions</h2>
+    </div>
+    <div class="space-y-6">
+      {% set faqs = [
+        { q: "How does it calculate portions?", a: "It uses the Mifflin-St Jeor equation to calculate daily calorie needs from age, weight, height, sex, and activity level. Protein targets use science-backed ranges (0.9–2.2 g/kg depending on goals). Portions are capped so the total never exceeds the recipe's serving count — you always cook the full batch." },
+        { q: "Does it work for kids?", a: "Yes. Child profiles support age-appropriate goals, fussy eater notes, texture aversions, preferred foods, and disliked foods. Kids get appropriately smaller portions based on their actual needs." },
+        { q: "What happens to leftovers?", a: "After cooking, you choose what to do with surplus servings: keep in the fridge (4-day expiry), freeze (no expiry), or discard. Leftovers appear as an option when planning future meals — no extra shopping needed." },
+        { q: "Can I undo a meal if I didn't cook it?", a: "Yes. Cooking mode has a 'Didn't Cook' button that returns all ingredients to your pantry — reversing the deduction from when the plan was confirmed." },
+        { q: "Can multiple people use it?", a: "Yes. The household owner invites members by email. Everyone shares recipes, pantry, meal plans, and family profiles from their own login." },
+        { q: "How much does it cost?", a: "PlateSync is currently free during early access. Pricing will be announced soon." }
+      ] %}
+      {% for faq in faqs %}
+      <div class="border-b border-neutral-200 pb-6">
+        <h3 class="text-base font-semibold text-neutral-900">{{ faq.q }}</h3>
+        <p class="mt-2 text-sm text-neutral-600 leading-relaxed">{{ faq.a }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ──── CTA ──── #}
+<section class="bg-emerald-600">
+  <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-white">Ready to plan smarter?</h2>
+    <p class="mt-3 text-base text-emerald-100">Free during early access. Set up your family and plan your first week in minutes.</p>
+    <a href="{{ site.appUrl }}" class="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-semibold text-emerald-700 shadow-lg hover:bg-emerald-50 transition-colors">
+      Get Started Free
+    </a>
+  </div>
+</section>

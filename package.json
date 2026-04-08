@@ -1,0 +1,25 @@
+{
+  "name": "platesync-site",
+  "version": "1.0.0",
+  "description": "PlateSync marketing site",
+  "type": "module",
+  "scripts": {
+    "css": "npx @tailwindcss/cli -i src/assets/css/main.css -o _site/assets/css/main.css --minify",
+    "css:watch": "npx @tailwindcss/cli -i src/assets/css/main.css -o _site/assets/css/main.css --watch",
+    "build:11ty": "eleventy",
+    "build": "npm run build:11ty && npm run css",
+    "dev": "npx concurrently \"eleventy --serve\" \"npm run css:watch\""
+  },
+  "keywords": [],
+  "author": "High Country Digital",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "concurrently": "^9.0.0"
+  }
+}

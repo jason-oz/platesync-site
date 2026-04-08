@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* PlateSync brand: DM Sans body, DM Mono accent */
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: "DM Mono", monospace;
+}
