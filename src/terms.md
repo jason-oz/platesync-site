@@ -1,7 +1,7 @@
 ---
 layout: legal.njk
 title: Terms of Service
-description: Terms of service for PlateSync.
+description: "Terms of service for PlateSync. Covers account requirements, acceptable use, data ownership, liability, and how changes to these terms are communicated."
 permalink: /terms/
 ---
 

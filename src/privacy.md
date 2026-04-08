@@ -1,7 +1,7 @@
 ---
 layout: legal.njk
 title: Privacy Policy
-description: How PlateSync handles your data.
+description: "How PlateSync handles your personal data — account security, AI processing, data storage in Germany, your rights, and how to request deletion."
 permalink: /privacy/
 ---
 
