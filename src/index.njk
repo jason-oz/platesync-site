@@ -143,45 +143,83 @@ description: "PlateSync builds weekly meal plans with per-person portions based 
 
 {# ──── Hero ──── #}
 <section class="relative overflow-hidden bg-white">
-  <div class="max-w-6xl mx-auto px-6 py-24 sm:py-32 text-center">
-    <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-4">Meal planning for real families</p>
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-neutral-900 leading-tight tracking-tight max-w-3xl mx-auto">
-      Everyone at the table gets exactly what they need
-    </h1>
-    <p class="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
-      PlateSync builds weekly meal plans with per-person portions based on each family member's health profile. Cook the full recipe, plate it right, and only buy what you need.
-    </p>
-    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ site.appUrl }}" class="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white hover:bg-emerald-700 transition-colors">
-        Get Started Free
-      </a>
-      <a href="#how-it-works" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">
-        See how it works &darr;
-      </a>
+  <div class="max-w-6xl mx-auto px-6 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-4">Meal planning for real families</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-neutral-900 leading-tight tracking-tight">
+          Everyone at the table gets exactly what they need
+        </h1>
+        <p class="mt-6 text-lg text-neutral-600">
+          PlateSync builds weekly meal plans with per-person portions based on each family member's health profile. Cook the full recipe, plate it right, and only buy what you need.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-start gap-4">
+          <a href="{{ site.appUrl }}" class="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white hover:bg-emerald-700 transition-colors">
+            Get Started Free
+          </a>
+          <a href="#how-it-works" class="inline-flex items-center text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors pt-3">
+            See how it works &darr;
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="/assets/images/=PlateSync-hero.webp"
+          alt="Family of four enjoying dinner together, each with their own portion"
+          class="w-full rounded-2xl object-cover shadow-lg"
+          width="800"
+          height="1000"
+          loading="eager"
+        />
+      </div>
     </div>
   </div>
 </section>
 
 {# ──── Problem ──── #}
 <section class="bg-neutral-50 border-y border-neutral-200">
-  <div class="max-w-4xl mx-auto px-6 py-20 md:py-24 text-center">
-    <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">The problem</p>
-    <h2 class="text-3xl font-bold text-neutral-900">The weekly scramble stops here</h2>
-    <p class="mt-4 text-base text-neutral-600 max-w-2xl mx-auto">
-      Dad needs 150g of protein. Mum's watching calories. The toddler eats half a serve of everything. The 6-year-old won't touch anything green. You're cooking one meal and somehow everyone needs a different plate — so you default to the same five dinners on repeat.
-    </p>
-    <p class="mt-4 text-base text-neutral-600 max-w-2xl mx-auto">
-      Most meal planners treat your family as one person. PlateSync doesn't.
-    </p>
+  <div class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative order-2 lg:order-1">
+        <img
+          src="/assets/images/=Platesync-problem.webp"
+          alt="Parent staring into an open fridge wondering what to cook for dinner"
+          class="w-full rounded-2xl object-cover shadow-md"
+          width="800"
+          height="533"
+          loading="lazy"
+        />
+      </div>
+      <div class="order-1 lg:order-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">The problem</p>
+        <h2 class="text-3xl font-bold text-neutral-900">The weekly scramble stops here</h2>
+        <p class="mt-4 text-base text-neutral-600">
+          Dad needs 150g of protein. Mum's watching calories. The toddler eats half a serve of everything. The 6-year-old won't touch anything green. You're cooking one meal and somehow everyone needs a different plate — so you default to the same five dinners on repeat.
+        </p>
+        <p class="mt-4 text-base text-neutral-600">
+          Most meal planners treat your family as one person. PlateSync doesn't.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
 {# ──── How It Works ──── #}
 <section id="how-it-works" class="bg-white">
   <div class="max-w-4xl mx-auto px-6 py-20 md:py-24">
-    <div class="text-center mb-12">
+    <div class="text-center mb-10">
       <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">How it works</p>
       <h2 class="text-3xl font-bold text-neutral-900">From setup to shopping list in minutes</h2>
+    </div>
+    <div class="mb-12">
+      <img
+        src="/assets/images/=platesync-family-profile.webp"
+        alt="Four family member profile cards showing personalised nutrition targets for Mark, Sarah, Leo and Mia"
+        class="w-full rounded-2xl object-cover shadow-sm border border-neutral-200"
+        width="1200"
+        height="600"
+        loading="lazy"
+      />
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
       {% set steps = [
@@ -215,20 +253,32 @@ description: "PlateSync builds weekly meal plans with per-person portions based 
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {% set features = [
-        { title: "Per-person portions", desc: "Science-backed targets using the Mifflin-St Jeor equation. Protein, calories, and portions personalised for every family member — from toddlers to adults." },
-        { title: "Day-aware nutrition", desc: "Targets adjust per day based on each person's weekly training schedule. More food on training days, less on rest days." },
-        { title: "Cooking mode", desc: "Full-screen mobile recipe view with checkable ingredients, step-by-step instructions, and per-person portion breakdown. No ads, no life story — just the recipe. Includes child-friendly adaptation notes." },
-        { title: "Leftovers tracking", desc: "Cook the full recipe. Surplus servings are tracked and can be assigned to future meals, frozen, or discarded. Shopping lists skip leftover meals." },
-        { title: "Allergy detection", desc: "Recipes are scanned against family members' allergies automatically. Smart enough to know that 'dairy-free milk' isn't dairy." },
-        { title: "Smart shopping lists", desc: "Full-batch ingredient amounts, pantry deduction, and AI normalisation to practical package sizes. Buy what you need, not what a formula says." },
-        { title: "AI recipe import", desc: "Search the web for real recipes. AI catalogues every ingredient, every step, and the nutrition — no manual data entry." },
-        { title: "Household sharing", desc: "Invite your partner or housemates. Everyone shares recipes, pantry, and meal plans from their own account." },
-        { title: "Supply management", desc: "Track fridge, pantry, and freezer. Type or dictate what you have and AI sorts it instantly. Auto-deducted when you cook, auto-restocked when you shop, restored if you change your mind." }
+        { title: "Per-person portions", desc: "Science-backed targets using the Mifflin-St Jeor equation. Protein, calories, and portions personalised for every family member — from toddlers to adults.", img: "/assets/images/=platesync-overhead-dinner-table.webp", imgAlt: "Four plates on a dinner table, each with different portion sizes for different family members" },
+        { title: "Day-aware nutrition", desc: "Targets adjust per day based on each person's weekly training schedule. More food on training days, less on rest days.", img: "/assets/images/=platesync-day-aware-nutrition.webp", imgAlt: "Two meal portions side by side — a larger plate for a training day and a smaller plate for a rest day" },
+        { title: "Cooking mode", desc: "Full-screen mobile recipe view with checkable ingredients, step-by-step instructions, and per-person portion breakdown. No ads, no life story — just the recipe. Includes child-friendly adaptation notes.", img: "/assets/images/=platesync-feature-highlight.webp", imgAlt: "Hand holding a phone showing a recipe in cooking mode with checkable ingredients" },
+        { title: "Leftovers tracking", desc: "Cook the full recipe. Surplus servings are tracked and can be assigned to future meals, frozen, or discarded. Shopping lists skip leftover meals.", img: "/assets/images/=platesync-leftovers-tracking.webp", imgAlt: "Glass meal prep containers stacked in a fridge with portioned meals inside" },
+        { title: "Allergy detection", desc: "Recipes are scanned against family members' allergies automatically. Smart enough to know that 'dairy-free milk' isn't dairy.", img: "/assets/images/=Platesync-allergy-detection.webp", imgAlt: "Common allergen foods arranged neatly on a white surface — nuts, dairy, eggs, wheat, shellfish" },
+        { title: "Smart shopping lists", desc: "Full-batch ingredient amounts, pantry deduction, and AI normalisation to practical package sizes. Buy what you need, not what a formula says.", img: "/assets/images/=platesync-shopping-list.webp", imgAlt: "Phone showing a shopping list grouped by category with quantities" },
+        { title: "AI recipe import", desc: "Search the web for real recipes. AI catalogues every ingredient, every step, and the nutrition — no manual data entry.", img: "/assets/images/=platesync-ai-recipe-import.webp", imgAlt: "Smartphone showing a recipe card interface beside fresh ingredients on a kitchen bench" },
+        { title: "Household sharing", desc: "Invite your partner or housemates. Everyone shares recipes, pantry, and meal plans from their own account.", img: "/assets/images/=platesync-household-sharing.webp", imgAlt: "Two smartphones side by side showing the same meal plan, belonging to two different household members" },
+        { title: "Supply management", desc: "Track fridge, pantry, and freezer. Type or dictate what you have and AI sorts it instantly. Auto-deducted when you cook, auto-restocked when you shop, restored if you change your mind.", img: "/assets/images/=platesync-supply-management.webp", imgAlt: "Neatly organised kitchen pantry shelf with jars, produce and packaged goods" }
       ] %}
       {% for feature in features %}
-      <div class="rounded-xl border border-neutral-200 bg-white p-5">
-        <h3 class="text-lg font-bold text-neutral-900">{{ feature.title }}</h3>
-        <p class="mt-2 text-sm text-neutral-600 leading-relaxed">{{ feature.desc }}</p>
+      <div class="rounded-xl border border-neutral-200 bg-white overflow-hidden">
+        {% if feature.img %}
+        <img
+          src="{{ feature.img }}"
+          alt="{{ feature.imgAlt }}"
+          class="w-full h-48 object-cover"
+          width="600"
+          height="400"
+          loading="lazy"
+        />
+        {% endif %}
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-neutral-900">{{ feature.title }}</h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">{{ feature.desc }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
