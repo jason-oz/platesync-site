@@ -167,10 +167,10 @@ All pages must follow the standards from the global CLAUDE.md:
 - [ ] Replace placeholder favicon with proper brand mark
 - [ ] Add OG image (screenshot or designed graphic)
 - [ ] Add app screenshots to feature sections
-- [ ] Create GitHub repo and push
+- [x] Create GitHub repo and push
 - [ ] Set up Vercel project and connect getplatesync.com domain
-- [ ] Add Google Analytics tag (get tracking ID first)
-- [ ] Add FAQPage + HowTo JSON-LD schema to homepage
+- [x] Add Google Analytics tag (G-ZMSHM5NXH0) — conversion events not yet configured
+- [x] Add FAQPage + HowTo JSON-LD schema to homepage
 - [ ] Pricing section (once pricing model is decided)
 - [ ] Add testimonials/social proof section (once beta feedback comes in)
 - [ ] Consider adding a /features page for deeper feature breakdowns
