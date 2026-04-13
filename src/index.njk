@@ -81,7 +81,7 @@ description: "PlateSync builds weekly meal plans with per-person portions based 
           "name": "How much does PlateSync cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PlateSync is currently free during early access. Pricing will be announced soon."
+            "text": "PlateSync is free forever — 1 user, 20 recipes, full meal planning, pantry tracking, shopping lists, and cooking mode. The Family Plan adds household sharing, unlimited recipes, and unlimited AI imports for $7.99 AUD/month or $69.99 AUD/year."
           }
         }
       ]
@@ -285,6 +285,85 @@ description: "PlateSync builds weekly meal plans with per-person portions based 
   </div>
 </section>
 
+{# ──── Pricing ──── #}
+<section id="pricing" class="bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-20 md:py-24">
+    <div class="text-center mb-12">
+      <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-2">Simple pricing</p>
+      <h2 class="text-3xl font-bold text-neutral-900">Free forever. Pay when your household grows.</h2>
+      <p class="mt-3 text-base text-neutral-600 max-w-2xl mx-auto">Every feature that matters is included on the Free plan. Upgrade for household sharing and unlimited recipes.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+      {# Free Tier #}
+      <div class="rounded-xl border border-neutral-200 bg-white p-8 flex flex-col">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-1">Free</p>
+        <div class="mt-2">
+          <span class="text-4xl font-extrabold text-neutral-900">$0</span>
+          <span class="text-base text-neutral-500 ml-1">forever</span>
+        </div>
+        <p class="mt-3 text-sm text-neutral-600">Everything you need to plan meals for your family.</p>
+        <ul class="mt-8 space-y-3 text-sm text-neutral-600 flex-1">
+          {% set freeFeatures = [
+            "1 user",
+            "Unlimited family profiles",
+            "20 recipes",
+            "5 AI recipe imports per month",
+            "Full meal planning",
+            "Pantry tracking",
+            "Shopping lists",
+            "Cooking mode",
+            "Leftover tracking"
+          ] %}
+          {% for item in freeFeatures %}
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ site.appUrl }}" class="mt-8 inline-flex items-center justify-center rounded-lg border border-neutral-200 bg-white px-6 py-3 text-base font-semibold text-neutral-600 hover:bg-neutral-50 transition-colors">
+          Get Started Free
+        </a>
+      </div>
+
+      {# Family Plan #}
+      <div class="rounded-xl border-2 border-emerald-600 bg-white p-8 flex flex-col relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white">Recommended</span>
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-emerald-600 mb-1">Family Plan</p>
+        <div class="mt-2">
+          <span class="text-4xl font-extrabold text-neutral-900">$7.99</span>
+          <span class="text-base text-neutral-500 ml-1">AUD / month</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-500">or $69.99 AUD / year <span class="text-emerald-600 font-medium">(save 27%)</span></p>
+        <p class="mt-3 text-sm text-neutral-600">Share the kitchen with your whole household.</p>
+        <ul class="mt-8 space-y-3 text-sm text-neutral-600 flex-1">
+          {% set familyFeatures = [
+            "<strong>Everything in Free</strong>",
+            "Household sharing — up to 5 users",
+            "Unlimited recipes",
+            "Unlimited AI recipe imports",
+            "Priority support"
+          ] %}
+          {% for item in familyFeatures %}
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>{{ item | safe }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="mt-8 space-y-3">
+          <a href="{{ site.appUrl }}" class="inline-flex w-full items-center justify-center rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white hover:bg-emerald-700 transition-colors">
+            Start Free Trial
+          </a>
+          <p class="text-center text-xs text-neutral-500">Try Family free for 30 days — no credit card required</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-8 text-sm text-neutral-500">Have questions? <a href="/pricing/" class="text-emerald-600 hover:text-emerald-700 underline">See full pricing details and FAQ</a></p>
+  </div>
+</section>
+
 {# ──── FAQ ──── #}
 <section id="faq" class="bg-white">
   <div class="max-w-3xl mx-auto px-6 py-20 md:py-24">
@@ -302,7 +381,7 @@ description: "PlateSync builds weekly meal plans with per-person portions based 
         { q: "What cuisines and diets does it support?", a: "Cuisines include Mediterranean, Asian, Indian, Mexican, Japanese, Korean, Thai, Middle Eastern, American, and African. Diets include balanced, high protein, Mediterranean, keto, paleo, Whole30, vegetarian, and vegan. Each family member can have their own diet preference." },
         { q: "Is my data private?", a: "Yes. All household data is secured with row-level security — only members of your household can access your recipes, pantry, and meal plans. Data is stored on encrypted servers. No personal health data is ever sent to AI providers." },
         { q: "Can multiple people use it?", a: "Yes. The household owner invites members by email. Everyone shares recipes, pantry, meal plans, and family profiles from their own login." },
-        { q: "How much does it cost?", a: "PlateSync is currently free during early access. Pricing will be announced soon." }
+        { q: "How much does it cost?", a: "PlateSync is free forever — 1 user, 20 recipes, full meal planning, pantry tracking, shopping lists, and cooking mode. The Family Plan adds household sharing, unlimited recipes, and unlimited AI imports for $7.99 AUD/month. <a href='/pricing/' class='text-emerald-600 hover:text-emerald-700 underline'>See full pricing</a>." }
       ] %}
       {% for faq in faqs %}
       <div class="border-b border-neutral-200 pb-6">
@@ -318,7 +397,7 @@ description: "PlateSync builds weekly meal plans with per-person portions based 
 <section class="bg-emerald-600">
   <div class="max-w-3xl mx-auto px-6 py-20 md:py-24 text-center">
     <h2 class="text-2xl sm:text-3xl font-bold text-white">The AI does the maths. You do the cooking.</h2>
-    <p class="mt-3 text-base text-emerald-100">Free during early access. Set up your family and plan your first week in minutes.</p>
+    <p class="mt-3 text-base text-emerald-100">Free forever. Set up your family and plan your first week in minutes.</p>
     <a href="{{ site.appUrl }}" class="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-semibold text-emerald-700 hover:bg-emerald-50 transition-colors">
       Get Started Free
     </a>
